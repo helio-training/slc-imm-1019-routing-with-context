@@ -1,17 +1,18 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useHistory } from "react-router-dom";
 
-import { fakeAuth } from '../../pages/index'
+import { AuthContext } from '../../context/auth-context'
  
 function SignOut() {
     let history = useHistory();
+    let context = useContext(AuthContext)
 
-    return fakeAuth.isAuthenticated ? (
+    return context.isAuthenticated ? (
         <p>
             Welcome!{" "}
             <button
                 onClick={() => {
-                    fakeAuth.signout(() => history.push("/"));
+                    context.signout(() => history.push("/"));
                 }}
             >
                 Sign out

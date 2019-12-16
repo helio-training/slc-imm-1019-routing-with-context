@@ -12,6 +12,12 @@ export const Links = () => {
                 <li>
                     <Link to="/protected">Protected Page</Link>
                 </li>
+                <li>
+                    <Link to="/protected2">Protected Page</Link>
+                </li>
+                <li>
+                    <Link to="/protected3">Protected Page</Link>
+                </li>
             </ul>
         </div>
         )
